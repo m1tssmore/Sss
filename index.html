@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Три чемодана — туры за границу</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&family=Oswald:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Три чемодана</div>
+    <nav aria-label="Страницы"><a href="#glavnaya" id="n-glavnaya">Главная</a><a href="#tury" id="n-tury">Все туры</a></nav>
+  </header>
+
+  <main id="p-glavnaya">
+    <h1>Туда, где сейчас хорошо</h1>
+    <p class="lead">Собираем поездки из Алматы и Астаны в семь стран. Цены в тенге, за человека, с перелётом и отелем.</p>
+    <a class="btn" href="#tury">Смотреть все туры</a>
+    <div id="pano"></div>
+
+    <section class="blk">
+      <h2>Сейчас в сезон</h2>
+      <div class="feat" id="feat"></div>
+    </section>
+
+    <section class="blk">
+      <h2>Как купить тур</h2>
+      <ol class="steps">
+        <li><span class="big">1</span><div><b>Выбираете тур</b>На странице «Все туры» откройте нужную страну и оставьте имя с телефоном.</div></li>
+        <li><span class="big">2</span><div><b>Менеджер звонит в течение часа</b>Уточняет даты, число людей и город вылета, считает точную цену.</div></li>
+        <li><span class="big">3</span><div><b>Подписываете договор</b>В офисе или онлайн, в тот же день. Цена в договоре не меняется.</div></li>
+        <li><span class="big">4</span><div><b>Платите и получаете документы</b>Kaspi, карта или перевод. Билеты и ваучеры приходят на почту за 3 дня до вылета.</div></li>
+      </ol>
+    </section>
+
+    <section class="blk">
+      <h2>Что пишут после поездок</h2>
+      <div class="rev">
+        <blockquote><p>В Турции нас встретили с табличкой прямо у выхода, отель оказался в скале, как на фото. Единственное, что пошло не по плану, — облачно в день шара. Нам перенесли полёт бесплатно.</p><cite>Айгерим, Алматы</cite></blockquote>
+        <blockquote><p>Брали Таиланд на троих. Менеджер сама предложила другой остров вместо переполненного.</p><cite>Данияр, Астана</cite></blockquote>
+        <blockquote><p>Первый раз летела за границу с ребёнком. Всё объяснили про документы заранее, ни одной неожиданности в аэропорту.</p><cite>Мария, Шымкент</cite></blockquote>
+        <blockquote><p>Дороже, чем в сети, на пару тысяч. Зато в Японии гид говорил по-русски, и это того стоило.</p><cite>Тимур, Караганда</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="blk">
+      <h2>Вопросы, которые задают чаще всего</h2>
+      <dl>
+        <dt>Можно ли в рассрочку?</dt><dd>Да, на 3 и 6 месяцев. Условия назовёт менеджер при расчёте.</dd>
+        <dt>Страховка входит в цену?</dt><dd>Да, медицинская страховка есть в каждом туре. Расширенную можно добавить за отдельную плату.</dd>
+        <dt>Сколько стоит поездка с ребёнком?</dt><dd>Дети до 2 лет летят без отдельного места, оплачивается 10% цены тура. Для старших цена зависит от страны и отеля.</dd>
+        <dt>Нужна ли виза?</dt><dd>Зависит от страны и гражданства. Правила на ваши даты менеджер проверит и скажет до оплаты.</dd>
+        <dt>Что если рейс отменили?</dt><dd>Перенесём на ближайший вылет или вернём деньги за неиспользованную часть. Решаете вы.</dd>
+      </dl>
+    </section>
+
+    <div class="facts">
+      <p><b>Цена не растёт</b>После договора вы не доплачиваете за курс, топливо или багаж из тарифа.</p>
+      <p><b>Живой человек на связи</b>Менеджер отвечает с 9 до 21 по времени Астаны, в том числе из страны, куда вы улетели.</p>
+      <p><b>Возврат до вылета</b>Передумали за 14 дней и больше — вернём всё, кроме визового сбора.</p>
+    </div>
+  </main>
+
+  <main id="p-tury" hidden>
+    <h1>Все туры</h1>
+    <p class="lead">Семь направлений. Нажмите на строку, чтобы увидеть даты вылетов, что входит в цену, и оставить заявку.</p>
+    <div class="filters" role="group" aria-label="Фильтр туров">
+      <span>Показать:</span>
+      <button data-f="all" aria-pressed="true">Все</button>
+      <button data-f="now" aria-pressed="false">Что сейчас в сезон</button>
+      <button data-f="cheap" aria-pressed="false">До 400 000 ₸</button>
+      <button data-f="asia" aria-pressed="false">Азия</button>
+    </div>
+    <div class="count" id="count"></div>
+    <div id="list"></div>
+
+    <div class="custom">
+      <div>
+        <h2>Нет подходящего?</h2>
+        <p>Соберём поездку под вас: другая страна, другие даты, большая компания или свадебное путешествие. Напишите, куда хотите и когда, мы вернёмся с вариантами и ценой.</p>
+      </div>
+      <form data-n="индивидуальный тур"><b>Индивидуальный тур</b>
+        <label>Имя<input name="a" required autocomplete="given-name"></label>
+        <label>Телефон<input name="b" type="tel" required autocomplete="tel"></label>
+        <button class="btn">Рассчитать</button><div class="ok" aria-live="polite"></div></form>
+    </div>
+  </main>
+
+  <footer>Телефон: +7 700 000-00-00. Агентство, туры, цены, даты и отзывы вымышлены.</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
